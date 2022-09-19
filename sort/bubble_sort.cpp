@@ -1,7 +1,6 @@
 #include <vector>
 /*
-* WORST CASE :  O(n^2)
-* BEST CASE  :  O(n)
+* Time Complexity: O(n^2)
 */
 void bubble_sort(std::vector<int> &vec){
   int n = vec.size();

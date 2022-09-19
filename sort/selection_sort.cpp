@@ -1,4 +1,9 @@
 #include <vector>
+
+/*
+* Time Complexity: O(n^2)
+*/
+
 void selection_sort(std::vector<int> &vec){
   int n = vec.size();
   for(int i = 0; i < n-1; i++){
