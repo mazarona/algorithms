@@ -1,7 +1,7 @@
 #include <vector>
 
 /*
-* Time Complexity: O(log(n));
+* Time Complexity: O(n*log(n));
 */
 
 void merge(std::vector<int> &vec, int l, int r){
@@ -10,6 +10,8 @@ void merge(std::vector<int> &vec, int l, int r){
   int rt = m+1;
   int sz = r-l+1;
   std::vector<int> tmp(sz);
+
+  /* Merge int tmp using two pointers technique */
   for(int i = 0; i < sz; i++){
     if(lt > m) 
       tmp[i] = vec[rt++];
@@ -20,9 +22,10 @@ void merge(std::vector<int> &vec, int l, int r){
     else 
       tmp[i] = vec[rt++]; 
   }
-  for(int i = 0; i < sz; i++){
+
+  /* Overwrite onto the vector with the sorted elements in tmp */
+  for(int i = 0; i < sz; i++)
     vec[l+i] = tmp[i];
-  }
 }
 
 void merge_sort(std::vector<int> &vec, int l, int r){

@@ -1,7 +1,9 @@
 #include <vector>
+
 /*
 * Time Complexity: O(n^2)
 */
+
 void bubble_sort(std::vector<int> &vec){
   int n = vec.size();
   bool is_sorted = true;
